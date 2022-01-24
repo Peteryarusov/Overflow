@@ -6900,25 +6900,25 @@ def fanction():
                           (70, 70)), i)
         c += 100
 
-    FON(sprite_Button, 0, 0,
-        pygame.transform.scale(load_image("3.jpeg"),
-                               (700, 500)))
+FON(sprite_Button, 0, 0,
+        pygame.transform.scale(load_image("black-and-white-splashes-ink_76542-209.jpg"),
+                               (600, 400)))
     FON(sprite_Button, 0, 250,
-        pygame.transform.scale(load_image("4.jpeg", -1), (1832 // 6, 712 // 6)))
-    a2 = Button(sprite_Button, 70, 130,
-                pygame.transform.scale(load_image("5.jpeg", -1), (240, 70)), False)
-    a1 = Button(sprite_Button, 320, 130,
-                pygame.transform.scale(load_image("5.jpeg", -1), (200, 70)), True)
-    Button_levels(sprite_Button_levels, 420, 230,
+        pygame.transform.scale(load_image("736.jpg", -1), (1832 // 6, 712 // 6)))
+    a2 = Button(sprite_Button, 100, 160,
+                pygame.transform.scale(load_image("254216.jpg", -1), (150, 70)), False)
+    a1 = Button(sprite_Button, 340, 160,
+                pygame.transform.scale(load_image("2524316.jpg", -1), (150, 70)), True)
+    Button_levels(sprite_Button_levels, 400, 230,
                   pygame.transform.scale(load_image(
-                      "3.jpeg"),
+                      "yellow-and-black-square-geometric-shapes-on-bac3kgrou4nd_52701-867.jpg"),
                       (120, 70)), False)
     FON(sprite_Button_resultats, 0, 0, pygame.transform.scale(load_image(
-        "3.jpeg"),
-        (700, 500)))
+        "п5.jpg"),
+        (600, 400)))
     Button_levels(sprite_Button_resultats, 450, 250,
                   pygame.transform.scale(load_image(
-                      "3.jpeg"),
+                      "42527.jpg"),
                       (100, 50)), False)
     d = pygame.sprite.Group()
     class AnimatedSprite(pygame.sprite.Sprite):
