@@ -6975,6 +6975,7 @@ def fanction():
         else:
             sprite_Button.draw(screen)
             help2(screen)
+        d.draw(screen)
         pygame.display.flip()
     pygame.quit()
 
