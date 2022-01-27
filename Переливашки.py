@@ -1,7 +1,8 @@
-import sys
-from random import choice
 import datetime as dt
 import os
+import sys
+from random import choice
+
 import pygame
 
 lstsup2 = [0, 0, 0, 0, 0]
@@ -42,7 +43,7 @@ twelve_x = 360
 twelve_y = 230
 pygame.init()
 pygame.display.set_caption('second level')
-screen = pygame.display.set_mode((800, 600))
+screen = pygame.display.set_mode((600, 300))
 lstsup = [0, 0, 0]
 lstred = []
 lstgreen = []
@@ -68,7 +69,6 @@ eight_x = 360
 eight_y = 230
 pygame.init()
 pygame.display.set_caption('first level')
-
 
 
 def load_image(name, colorkey=None, fl=False):
@@ -6890,17 +6890,17 @@ def fanction():
 
     FON(sprite_Button_levels, 0, 0,
         pygame.transform.scale(
-            load_image(f"3.jpeg"),
+            load_image(f"warm-save-wallpaper-dark-texture_1258-284.jpg"),
             (600, 400)))
     c = 80
-    for i in range(1, 6):
+    for _ in range(1, 6):
         Button_levels(sprite_Button_levels, c, 100,
                       pygame.transform.scale(load_image(
-                          f"3.jpeg"),
-                          (70, 70)), i)
+                          f"yellow-and-black-square-geometric-shapes-on-bac3kgrou4nd_52701-867.jpg"),
+                          (70, 70)), _)
         c += 100
 
-FON(sprite_Button, 0, 0,
+    FON(sprite_Button, 0, 0,
         pygame.transform.scale(load_image("black-and-white-splashes-ink_76542-209.jpg"),
                                (600, 400)))
     FON(sprite_Button, 0, 250,
@@ -6921,6 +6921,7 @@ FON(sprite_Button, 0, 0,
                       "42527.jpg"),
                       (100, 50)), False)
     d = pygame.sprite.Group()
+
     class AnimatedSprite(pygame.sprite.Sprite):
         def __init__(self, sheet, columns, rows, x, y):
             super().__init__(d)
@@ -6944,11 +6945,12 @@ FON(sprite_Button, 0, 0,
             self.image = self.frames[self.cur_frame]
 
     MYEVENTTYPE = pygame.USEREVENT + 1
-    pygame.time.set_timer(MYEVENTTYPE, 10)
+    pygame.time.set_timer(MYEVENTTYPE, 1000)
     sound1 = pygame.mixer.Sound('Sound_07433 (mp3cut.net).wav')
+    sound1.play()
 
     AnimatedSprite(
-        pygame.transform.rotozoom(load_image('3353.jpg', -1), 0.1, 0.1), 4, 2, 100, 50)
+        pygame.transform.rotozoom(load_image('3353.jpg', -1), 0.09, 0.09), 4, 2, 400, 400)
     while running:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -6961,9 +6963,8 @@ FON(sprite_Button, 0, 0,
                 sprite_Button_resultats.update(event)
             if event.type == pygame.MOUSEMOTION:
                 sprite_Button.update(event, True)
-            for event in pygame.event.get():
-                if event.type == MYEVENTTYPE:
-                    d.update()
+            if event.type == MYEVENTTYPE:
+                d.update()
         if not a1.flag and a1.flag != 2:
             screen.fill((0, 0, 0))
             sprite_Button_levels.draw(screen)
